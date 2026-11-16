@@ -1,0 +1,156 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.data.tables.context.module.storefronts
+
+import _root_.java.util.HashMap
+import _root_.org.allbinary.util.BasicArrayList
+import _root_.org.allbinary.util.BasicArrayListD
+import _root_.org.allbinary.business.context.modules.storefront.StoreFront
+import _root_.org.allbinary.business.context.modules.storefront.StoreFrontData
+import _root_.org.allbinary.business.entry.EntryData
+import _root_.org.allbinary.business.init.db.UserDbInitInfo
+import _root_.org.allbinary.logic.StdUtil
+import _root_.org.allbinary.logic.communication.log.LogUtil
+import _root_.org.allbinary.logic.communication.sql.AbSqlBean
+import _root_.org.allbinary.logic.string.StringMaker
+
+class StoreFrontsEntity() extends AbSqlBean(new UserDbInitInfo()) with StoreFrontsEntityInterface {
+
+    val logUtil_StoreFrontsEntity : LogUtil = LogUtil.getInstance()
+
+    val tableName : String = "storefronts"
+
+    //Constructor
+    {
+        this.setTableName(this.tableName)
+    }
+
+    override def insert(values : BasicArrayList) : Unit = {
+        try {
+            super.insert(values)
+            if (_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypes.LOGGING.contains(_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypeFactory.getInstance().SQLLOGGING)) {
+                this.logUtil_StoreFrontsEntity.putF(this.commonStrings.SUCCESS, this, INSERT)
+            }
+        } catch {
+            case e : Exception => {
+                if (_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypes.LOGGING.contains(_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypeFactory.getInstance().SQLLOGGING)) {
+                    this.logUtil_StoreFrontsEntity.put(this.commonStrings.FAILURE, this, INSERT, e)
+                }
+            }
+        }
+    }
+
+    def delete(value : String) : Unit = {
+        try {
+            super.deleteWhere(StoreFrontData.getInstance().NAME, value)
+            if (_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypes.LOGGING.contains(_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypeFactory.getInstance().SQLLOGGING)) {
+                this.logUtil_StoreFrontsEntity.putF(this.commonStrings.SUCCESS, this, this.commonStrings.delete)
+            }
+        } catch {
+            case e : Exception => {
+                if (_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypes.LOGGING.contains(_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypeFactory.getInstance().SQLLOGGING)) {
+                    this.logUtil_StoreFrontsEntity.put(this.commonStrings.FAILURE, this, this.commonStrings.delete, e)
+                }
+            }
+        }
+    }
+
+    def getStoreFrontInterface(name : String) : StoreFront = {
+        var keysAndValues : HashMap[Object, Object] = StdUtil.getInstance().createHashMap().asInstanceOf[HashMap[Object, Object]]
+        keysAndValues.put(StoreFrontData.getInstance().NAME, name)
+        var storeHashMap : HashMap[Object, Object] = super.getRow(keysAndValues).asInstanceOf[HashMap[Object, Object]]
+        if (storeHashMap != null) {
+            return new StoreFront(storeHashMap)
+        } else {
+            return new StoreFront()
+        }
+        throw new IllegalStateException()
+    }
+
+    def getStoreFrontNames() : BasicArrayList = {
+        var storeFrontNames : BasicArrayList = super.getColumn(StoreFrontData.getInstance().NAME)
+        return storeFrontNames
+    }
+
+    def update(updatedValues : HashMap[Object, Object]) : Unit = {
+        super.updateWhere(StoreFrontData.getInstance().NAME, updatedValues.get(StoreFrontData.getInstance().NAME).asInstanceOf[String], updatedValues)
+    }
+
+    final def createTableStatement() : String = {
+        var storeFrontData : StoreFrontData = StoreFrontData.getInstance()
+        var stringBuffer : StringMaker = new StringMaker()
+        stringBuffer.append(this.sqlStrings.CREATE_TABLE)
+        stringBuffer.append(this.tableName)
+        stringBuffer.append(this.sqlStrings.START)
+        stringBuffer.append(storeFrontData.NAME)
+        stringBuffer.append(this.sqlTypeStrings.SIXTY_CHAR_COLUMN_NOT_NULL)
+        //UserData.USERNAME + this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL +
+        stringBuffer.append(storeFrontData.HOMEHOSTNAME)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.HOMEHOSTNAMEPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.HOSTNAME)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.HOSTNAMEPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTHOMEHOSTNAME)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTHOMEHOSTNAMEPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTHOSTNAME)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTHOSTNAMEPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.IMAGEPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.STATICPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.CATEGORYPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.INVENTORYCONTROL)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.CONFIGURATION)
+        stringBuffer.append(this.sqlTypeStrings.BLOB_NOT_NULL)
+        stringBuffer.append(storeFrontData.SUBSTORES)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TAGLOCATION)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.PACKAGELOCATION)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.FTP)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.FTPPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.FTPUSERNAME)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.FTPPASSWORD)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTFTP)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTFTPPATH)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTFTPUSERNAME)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(storeFrontData.TESTFTPPASSWORD)
+        stringBuffer.append(this.sqlTypeStrings.MAX_CHAR_COLUMN_NOT_NULL)
+        stringBuffer.append(EntryData.getInstance().TIMECREATED)
+        stringBuffer.append(this.sqlTypeStrings.MAX_BIG_INT_UNSIGNED_NOT_NULL)
+        stringBuffer.append(EntryData.getInstance().LASTMODIFIED)
+        stringBuffer.append(this.sqlTypeStrings.MAX_BIG_INT_UNSIGNED_NOT_NULL)
+        stringBuffer.append(this.sqlStrings.PRIMARY_KEY)
+        stringBuffer.append(storeFrontData.NAME)
+        stringBuffer.append(this.sqlStrings.END)
+        return stringBuffer.toString()
+    }
+
+    def createTable() : String = {
+        return super.createTable(this.createTableStatement())
+    }
+
+    override def dropTable() : String = {
+        return super.dropTable()
+    }
+
+}
+
+

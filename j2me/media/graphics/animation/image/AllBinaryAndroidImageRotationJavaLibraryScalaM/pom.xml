@@ -1,0 +1,759 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.allbinary.animation</groupId>
+  <artifactId>AllBinaryAndroidImageRotationJavaLibraryScala</artifactId>
+  <packaging>jar</packaging>
+  <!-- AllBinary Platform Version Start -->
+  <version>1.0.0-SNAPSHOT</version>
+  <!-- AllBinary Platform Version End -->
+
+  <name>AllBinaryAndroidImageRotationJavaLibraryScala</name>
+  <url>http://www.allbinary.com/</url>
+  <distributionManagement>
+      <snapshotRepository>
+          <id>nexus-snapshots</id>
+          <name>AllBinary Snapshots Nexus</name>
+          <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+      </snapshotRepository>
+      <repository>
+          <id>nexus-releases</id>
+          <name>AllBinary Releases Nexus</name>
+          <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+      </repository>
+  </distributionManagement>
+
+  <properties>
+        <!-- Scala install with maven2 for the Scala 3 compiler and library. Written by ScalaPomUpdater. -->
+        <scala.home>C:/scala</scala.home>
+      <buildLabel>${project.version}</buildLabel>
+      <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+  </properties>
+
+  <dependencies>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>3.8.1</version>
+          <scope>test</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.allbinary</groupId>
+          <artifactId>LoggingJ2MEAllScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+          <optional>true</optional>
+      </dependency>
+
+      <dependency>
+          <groupId>org.allbinary</groupId>
+          <artifactId>OpenGLNoneOtherJavaLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+          <optional>true</optional>
+      </dependency>
+
+      <dependency>
+          <groupId>org.allbinary.media.image</groupId>
+          <artifactId>ImageAndroidJavaLibraryScala</artifactId>
+<!--          <artifactId>ImageJ2SEJavaLibraryScala</artifactId>          -->
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+          <optional>true</optional>
+      </dependency>
+
+      <dependency>
+          <groupId>org.allbinary</groupId>
+          <artifactId>ImageCacheJ2MEJavaLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+          <optional>true</optional>
+      </dependency>
+
+      <dependency>
+          <groupId>org.allbinary</groupId>
+          <artifactId>RotationAnimationJavaLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+      </dependency>
+        
+      <dependency>
+          <groupId>org.allbinary.animation</groupId>
+          <artifactId>AllBinaryImageAnimationJavaLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+      </dependency>        
+
+      <dependency>
+          <groupId>org.allbinary.animation</groupId>
+          <artifactId>AllBinaryImageAnimationRotationJavaLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+      </dependency>        
+
+      <dependency>
+          <groupId>org.allbinary</groupId>
+          <artifactId>ProgressAndroidJavaLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+      </dependency>        
+      
+      <dependency>
+          <groupId>org.allbinary</groupId>
+          <artifactId>VectorJavaLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+      </dependency>
+    
+      <dependency>
+          <groupId>org.allbinary.cache</groupId>
+          <artifactId>AllBinaryCacheLibraryScala</artifactId>
+          <!-- AllBinary Platform Version Start -->
+          <version>1.0.0-SNAPSHOT</version>
+          <!-- AllBinary Platform Version End -->
+
+      </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameJ2MELibraryScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary.animation</groupId>
+            <artifactId>AllBinarySpriteAnimationJavaLibraryScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>AndroidToJ2MELibraryScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+        </dependency>
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-midp</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-android</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+            
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>1.5_r4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>1.5_r4</version>
+            <scope>provided</scope>
+            <classifier>sources</classifier>
+        </dependency>
+
+        <!-- scalac needs the classes in the signatures of the classes it uses. Added by ScalaPomTransitiveDependencyAdder. -->
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TempBaseJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2MEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLNoneJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEExceptionLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoSystemJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEForJ2MEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEOnlyJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary.game</groupId>
+            <artifactId>GameResourceNoneJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ApplicationStatisticsJ2MELibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>PCResourceLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2SEForJ2MEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary.media.image</groupId>
+            <artifactId>ImageJ2MEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-135</artifactId>
+            <version>2.0.4</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEWindowingJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameLicensingNullJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FormJMEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>AdvertisementClientNoneJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ScreenCaptureNoneJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ProgressJ2MEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NullCustomUIJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ThreadJ2MELibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameScoresBaseJ2MELibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameConfigurationJ2MEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameNotificationJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameLicensingOnlyDemoJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameInputPCJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameInputPCMotionJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoSensorJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FullScreenNoneJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TouchButtonBaseJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoTouchButtonJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NotDeviceSpecificNoMediaMIDP1LibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLESBaseJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameInputPersistanceLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>AllBinaryGyroSensorJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoSWTJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLESNullImageJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoHardwareJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEJsInteropCompatibilityJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NullCustomUIPreJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TempJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogNoPlatformJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FileJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2SEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>AllBinaryAdvertisementClientJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoneOnlyJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>YourSecurityJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoThirdPartyStoreJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>GameInputPCBaseJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TouchButtonJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>MotionGestureBaseJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>NoGyroSensorJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>SWTWithoutJOGLJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TouchJ2MENoneJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LoggingJ2MEExceptionScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2SEExceptionLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ThirdPartyStoreJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TouchScreenJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ClientInfoLicensingJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FileLicenseInitInfoJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>FileJ2SEJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>BasePreloaderJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>BasePreloaderFileJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary.data</groupId>
+            <artifactId>BaseDataJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>BasicSecurityJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>TokenizerJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>SimpleCryptLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>YourXmlRpcJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <!-- scalac needs the classes in the signatures of the classes it uses. Added by ScalaPomTransitiveDependencyAdder. -->
+        <dependency>
+            <groupId>org.allbinary.game.multiplayer</groupId>
+            <artifactId>AllBinaryGameClientBaseNullJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-android-ab</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>DamageGameJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>PartsJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>DropJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>CollisionLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>PickupGameJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>CollisionLayerJavaLibraryScala</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>compile-scala-sources</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target xmlns:if="ant:if">
+                                <fileset id="scala.sources" dir="${project.basedir}/src/main/java" includes="**/*.scala" erroronmissingdir="false"/>
+                                <!-- A project without .scala files such as a resource jar has nothing to compile -->
+                                <condition property="scala.sources.available">
+                                    <resourcecount when="greater" count="0" refid="scala.sources"/>
+                                </condition>
+                                <mkdir dir="${project.build.outputDirectory}"/>
+                                <pathconvert property="scala.source.files" refid="scala.sources" pathsep="${line.separator}"/>
+                                <echo file="${project.build.directory}/scala-sources.txt" message="${scala.source.files}"/>
+                                <path id="scala.library.path">
+                                    <fileset dir="${scala.home}/maven2" includes="org/scala-lang/scala-library/**/*.jar,org/scala-lang/scala3-library_3/**/*.jar"/>
+                                </path>
+                                <path id="scala.compiler.path">
+                                    <fileset dir="${scala.home}/maven2" includes="org/scala-lang/scala3-compiler_3/**/*.jar,org/scala-lang/scala3-interfaces/**/*.jar,org/scala-lang/tasty-core_3/**/*.jar,org/scala-lang/scala-library/**/*.jar,org/scala-lang/scala3-library_3/**/*.jar,org/scala-sbt/**/*.jar,org/ow2/asm/**/*.jar"/>
+                                </path>
+                                <pathconvert property="scala.classpath">
+                                    <path refid="maven.compile.classpath"/>
+                                    <path refid="scala.library.path"/>
+                                </pathconvert>
+                                <java if:set="scala.sources.available" classname="dotty.tools.dotc.Main" classpathref="scala.compiler.path" fork="true" failonerror="true">
+                                    <jvmarg value="-Xss16m"/>
+                                    <arg value="-nowarn"/>
+                                    <arg value="-color:never"/>
+                                    <arg value="-encoding"/>
+                                    <arg value="UTF-8"/>
+                                    <arg value="-d"/>
+                                    <arg value="${project.build.outputDirectory}"/>
+                                    <arg value="-classpath"/>
+                                    <arg value="${scala.classpath}"/>
+                                    <arg value="@${project.build.directory}/scala-sources.txt"/>
+                                </java>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!--
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <forceCreation>true</forceCreation>
+                    <archive>
+                        <manifestEntries>
+                            <Implementation-Version>${pom.version}</Implementation-Version>
+                        </manifestEntries>
+                    </archive>
+
+                    <assembly>
+                        <inclusions>
+                            <inclusion>
+                                <groupId>org.allbinary</groupId>
+                                <artifactId>J2MEExceptionModule</artifactId>
+                                <library>true</library>
+                            </inclusion>
+                            <inclusion>
+                                <groupId>org.allbinary</groupId>
+                                <artifactId>LogModule</artifactId>
+                                <library>true</library>
+                            </inclusion>
+                        </inclusions>
+
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.microemu</groupId><artifactId>microemu-midp</artifactId>
+                        </exclusion>
+                        <exclusion>
+                            <groupId>org.microemu</groupId><artifactId>microemu-jsr-135</artifactId>
+                        </exclusion>
+                    </exclusions>
+
+                    </assembly>
+
+                            </configuration>
+                        </plugin>
+            -->
+
+        </plugins>
+
+    </build>
+
+</project>
+

@@ -1,0 +1,52 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.input.motion.button
+
+import _root_.android.app.Activity
+import _root_.android.content.res.Configuration
+import _root_.org.allbinary.string.CommonStrings
+import _root_.org.allbinary.logic.communication.log.PreLogUtil
+
+class TouchScreenTypeFactory {
+    import _root_.org.allbinary.input.motion.button.TouchScreenTypeFactory.{*}
+
+    def update(activity : Activity) : Unit = {
+        val commonStrings : CommonStrings = CommonStrings.getInstance()
+        val touchScreenFactory : TouchScreenFactory = TouchScreenFactory.getInstance()
+        val touchScreenTypesFactory : TouchScreenTypesFactory = TouchScreenTypesFactory.getInstance()
+        var configuration : Configuration = activity.getResources().getConfiguration()
+        var touchScreen : Int = configuration.touchscreen
+        if (touchScreen == Configuration.TOUCHSCREEN_FINGER) {
+            touchScreenFactory.setTouchScreenType(touchScreenTypesFactory.FINGER)
+            if (!touchScreenFactory.isTouch()) {
+                //this.logUtil.putF("Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings.PROCESS);
+                PreLogUtil.put("Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings.PROCESS)
+                touchScreenFactory.setTouch(true)
+            }
+        } else if (touchScreen == Configuration.TOUCHSCREEN_STYLUS) {
+            touchScreenFactory.setTouchScreenType(touchScreenTypesFactory.STYLUS)
+            if (!touchScreenFactory.isTouch()) {
+                //this.logUtil.putF("Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings.PROCESS);
+                PreLogUtil.put("Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings.PROCESS)
+                touchScreenFactory.setTouch(true)
+            }
+        } else if (touchScreen == Configuration.TOUCHSCREEN_NOTOUCH) {
+            touchScreenFactory.setTouchScreenType(touchScreenTypesFactory.NOTOUCH)
+        } else if (touchScreen == Configuration.TOUCHSCREEN_UNDEFINED) {
+            touchScreenFactory.setTouchScreenType(touchScreenTypesFactory.UNDEFINED)
+        }
+    }
+
+}
+
+object TouchScreenTypeFactory {
+    //protected final LogUtil logUtil = LogUtil.getInstance();
+    private val instance : TouchScreenTypeFactory = new TouchScreenTypeFactory()
+
+    def getInstance() : TouchScreenTypeFactory = {
+        return TouchScreenTypeFactory.instance
+    }
+
+}
+
+

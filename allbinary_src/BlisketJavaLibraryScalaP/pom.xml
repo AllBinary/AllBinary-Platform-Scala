@@ -1,0 +1,147 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary.business</groupId>
+    <artifactId>BlisketJavaLibraryPScala</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>BlisketJavaLibraryPScala</name>
+    <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    
+    <modules>
+
+        <!--
+        <module>../../j2me/AllBinaryJ2MELibraryScalaP</module>
+        -->
+        <!--
+        <module>../data/DataJavaLibraryScalaM</module>
+        -->
+
+        <module>../licensing/TestServiceClientInfoJavaLibraryScalaM</module>        
+
+        <module>../data/DataTableInterfacesScalaM</module>
+        
+        <module>../QueueJavaLibraryScalaM</module>
+        
+        <!--
+        <module>../TokenizerJavaLibraryScalaM</module>
+        -->
+
+        <module>../logging/LogConfigTypeFreeblisketJavaLibraryScalaM</module>
+
+        <module>../JavaUtilLibraryScalaM</module>
+        <module>../NullInitInfoJavaLibraryScalaM</module>        
+        <module>../InitInfoJavaLibraryScalaM</module>
+        <module>../PreLoaderHttpJavaLibraryScalaM</module>
+        
+        <module>../TagsBaseJavaLibraryScalaM</module>
+        <module>../CustomLoaderJavaLibraryScalaM</module>
+        
+        <!--
+        <module>../logic/data/file/FileJ2SEJavaLibraryScalaM</module>
+        <module>../logic/data/file/FileJavaLibraryScalaM</module>
+        -->
+
+        <module>../data/SQLAllBinaryJavaLibraryScalaM</module>
+
+        <!--
+        <module>../licensing/FileLicenseInitInfoJavaLibraryScalaM</module>
+        -->
+
+        <module>../DocumentObjectModelJavaLibraryScalaM</module>
+
+        <module>../VisualStyleJavaLibraryScalaM</module>
+
+        <module>../ConfigurationJavaLibraryScalaM</module>
+
+        <module>../VisualTransformBaseJavaLibraryScalaM</module>
+
+        <module>../CategoryBaseJavaLibraryScalaM</module>
+        <module>../CategoryJavaLibraryScalaM</module>
+
+        <module>../UserJavaLibraryScalaM</module>
+
+        <module>../PaymentGatewayBaseJavaLibraryScalaM</module>
+
+        <module>../data/vo/EntitiesBlisketVOJavaLibraryScalaM</module>
+        <module>../PaymentGatewayJavaLibraryScalaM</module>
+        <module>../data/vo/EntitiesOrderHistoryVOJavaLibraryScalaM</module>
+        <module>../data/vo/EntityPaymentGatewayVOJavaLibraryScalaM</module>
+        <module>../data/vo/EntityStoreFrontVOJavaLibraryScalaM</module>
+
+        <module>../data/EntitiesBlisketBaseInterfacesJavaLibraryScalaM</module>
+        <module>../data/EntitiesBlisketBaseJavaLibraryScalaM</module>
+        
+        <module>../data/EntitiesAdvertisementBaseJavaLibraryScalaM</module>
+        <module>../data/EntityOrderHistoryJavaLibraryScalaM</module>
+        <module>../data/EntityPaymentGatewayJavaLibraryScalaM</module>
+        <module>../data/EntityVisualTransformJavaLibraryScalaM</module>
+        <module>../data/EntityUserJavaLibraryScalaM</module>
+        <module>../data/EntityWorkflowJavaLibraryScalaM</module>
+
+        <module>../SMTPConfigurationJavaLibraryScalaM</module>
+        <module>../SMTPBaseJavaLibraryScalaM</module>
+
+        <module>../VisualTransformJavaLibraryScalaM</module>
+
+        <module>../../replace_these_stub_projects/allbinary_src/YourRuntimeEnvironmentJavaLibraryScalaM</module>
+        <module>../GatewayJavaLibraryScalaM</module>
+        
+        <module>../WorkflowBaseJavaLibraryScalaM</module>
+        <module>../WorkflowJavaLibraryScalaM</module>
+
+        <module>../IdGeneratorUsingFilesJavaLibraryScalaM</module>
+        <module>../BlisketPreVOJavaLibraryScalaM</module>
+
+        <!-- 
+        EntitiesOrderHistoryVOJavaLibrary
+        UserJavaLibrary
+        -->
+        
+        <module>../BlisketVOJavaLibraryScalaM</module>
+
+        <module>../UserCommerceJavaLibraryScalaM</module>
+
+        <module>../CustomizerValidatorsJavaLibraryScalaM</module>
+
+        <!-- 
+        AllBinaryCacheForShiftOneJavaLibrary
+        AllBinaryJSECacheJavaLibrary
+        ColorJavaLibrary
+        ImageJavaLibrary
+        -->
+        
+        <module>../logic/data/file/FileMediaJ2SEJavaLibraryScalaM</module>
+        <module>../BlisketBaseJavaLibraryScalaM</module>
+
+        <module>../logging/LoggingGAEAllScalaM</module>
+        <module>../BlisketJavaLibraryScalaM</module>
+        
+    </modules>
+
+</project>
+

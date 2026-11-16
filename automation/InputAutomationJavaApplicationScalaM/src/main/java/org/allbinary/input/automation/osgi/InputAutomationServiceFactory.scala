@@ -1,0 +1,38 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.input.automation.osgi
+
+import _root_.org.osgi.framework.Bundle
+import _root_.org.osgi.framework.ServiceFactory
+import _root_.org.osgi.framework.ServiceRegistration
+import _root_.org.allbinary.input.automation.InputAutomationJFrame
+import _root_.org.allbinary.logic.communication.log.LogUtil
+import _root_.org.allbinary.string.CommonStrings
+
+class InputAutomationServiceFactory private() extends ServiceFactory {
+    import _root_.org.allbinary.input.automation.osgi.InputAutomationServiceFactory.{*}
+
+    val logUtil : LogUtil = LogUtil.getInstance()
+
+    val commonStrings : CommonStrings = CommonStrings.getInstance()
+
+    def getService(bundle : Bundle, registration : ServiceRegistration) : Object = {
+        this.logUtil.putF(this.commonStrings.START, this, "getService")
+        return InputAutomationJFrame.getInstance()
+    }
+
+    def ungetService(bundle : Bundle, registration : ServiceRegistration, service : Object) : Unit = {
+    }
+
+}
+
+object InputAutomationServiceFactory {
+    private val inputAutomationServiceFactory : InputAutomationServiceFactory = new InputAutomationServiceFactory()
+
+    def getInstance() : InputAutomationServiceFactory = {
+        return InputAutomationServiceFactory.inputAutomationServiceFactory
+    }
+
+}
+
+

@@ -1,0 +1,76 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package views.admin.user
+
+import _root_.org.allbinary.business.user.role.UserRole
+import _root_.org.allbinary.business.user.role.UserRoleB
+import _root_.org.allbinary.business.user.role.UserRoleData
+import _root_.org.allbinary.data.tables.user.UserEntityFactory
+import _root_.org.allbinary.logic.communication.log.LogUtil
+import _root_.org.allbinary.logic.control.validate.ValidationComponentInterface
+import _root_.org.allbinary.logic.visual.transform.info.TransformInfoHttpInterface
+import _root_.org.allbinary.logic.visual.transform.info.TransformInfoInterface
+import _root_.org.w3c.dom.Document
+import _root_.org.w3c.dom.Node
+
+class UsersValidationView(param_transformInfoInterface : TransformInfoInterface) extends UsersView(param_transformInfoInterface) with ValidationComponentInterface {
+
+    val logUtil_UsersValidationView : LogUtil = LogUtil.getInstance()
+
+    //Constructor
+    {
+        val transformInfoInterface : TransformInfoInterface = param_transformInfoInterface
+        var httpTransformInfoInterface : TransformInfoHttpInterface = this.getTransformInfoInterface().asInstanceOf[TransformInfoHttpInterface]
+        var role : String = httpTransformInfoInterface.getPropertiesHashMap().get(UserRoleData.NAME.toString()).asInstanceOf[String]
+        var userRole : UserRole = UserRoleB.getRole(role)
+        this.userVector = UserEntityFactory.getInstance().getUsersWithRole(userRole)
+    }
+
+    def isValid() : _root_.java.lang.Boolean = {
+        try {
+            if (this.userVector.size() > 0) {
+                return _root_.java.lang.Boolean.TRUE
+            } else {
+                return _root_.java.lang.Boolean.FALSE
+            }
+        } catch {
+            case e : Exception => {
+                if (_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypes.LOGGING.contains(_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypeFactory.getInstance().VIEWERROR)) {
+                    this.logUtil_UsersValidationView.put("Failed to validate", this, this.commonStrings.IS_VALID, e)
+                }
+                return _root_.java.lang.Boolean.FALSE
+            }
+        }
+        throw new IllegalStateException()
+    }
+
+    def validationInfo() : String = {
+        try {
+            return "No Users"
+        } catch {
+            case e : Exception => {
+                if (_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypes.LOGGING.contains(_root_.org.allbinary.logic.communication.log.config.`type`.LogConfigTypeFactory.getInstance().VIEWERROR)) {
+                    this.logUtil_UsersValidationView.put("Failed to generate validation error info", this, "validationInfo()", e)
+                }
+                return "Error Getting Validation Info"
+            }
+        }
+        throw new IllegalStateException()
+    }
+
+    def toValidationInfoDoc() : Document = {
+        return null
+    }
+
+    def toValidationInfoNode(document : Document) : Node = {
+        return null
+    }
+
+    //Needed for polyglot do not remove
+    override def getTransformInfoInterface() : TransformInfoInterface = {
+        return super.getTransformInfoInterface()
+    }
+
+}
+
+

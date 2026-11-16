@@ -1,0 +1,24 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.business.advertisement
+
+
+class AdvertisementData private() {
+    import _root_.org.allbinary.business.advertisement.AdvertisementData.{*}
+
+    val NAME : String = "ADVERTISEMENT_NAME"
+
+    val DESCRIPTION : String = "ADVERTISEMENT_DESCRIPTION"
+
+}
+
+object AdvertisementData {
+    private val instance : AdvertisementData = new AdvertisementData()
+
+    def getInstance() : AdvertisementData = {
+        return AdvertisementData.instance
+    }
+
+}
+
+

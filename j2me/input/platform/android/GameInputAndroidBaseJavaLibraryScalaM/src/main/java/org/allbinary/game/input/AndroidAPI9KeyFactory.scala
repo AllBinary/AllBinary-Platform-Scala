@@ -1,0 +1,44 @@
+/* Generated Code Do Not Modify */
+package org.allbinary.game.input
+
+import _root_.android.view.KeyEvent
+import _root_.org.allbinary.logic.NullUtil
+
+class AndroidAPI9KeyFactory() extends AndroidKeyFactory {
+    import _root_.org.allbinary.game.input.AndroidAPI9KeyFactory.{*}
+
+    //Constructor
+    {
+        /*          */
+        this.KEYCODE_BUTTON_L1 = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L1, "BUTTON L1")
+        this.KEYCODE_BUTTON_R1 = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R1, "BUTTON R1")
+        this.KEYCODE_BUTTON_THUMBR = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBR, "BUTTON THUMBR")
+        this.KEYCODE_BUTTON_THUMBL = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBL, "BUTTON THUMBL")
+        this.KEYCODE_BUTTON_START = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_START, "BUTTON START")
+        this.KEYCODE_BUTTON_MODE = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_MODE, "BUTTON MODE")
+        this.KEYCODE_BUTTON_B = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_B, "BUTTON B")
+        this.KEYCODE_BUTTON_A = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_A, "BUTTON A")
+        this.KEYCODE_BUTTON_X = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_X, "BUTTON X")
+        this.KEYCODE_BUTTON_Y = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_Y, "BUTTON Y")
+        this.KEYCODE_BUTTON_L2 = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L2, "BUTTON L2")
+        this.KEYCODE_BUTTON_R2 = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R2, "BUTTON R2")
+        this.KEYCODE_BUTTON_SELECT = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_SELECT, "BUTTON SELECT")
+        this.KEYCODE_BUTTON_C = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_C, "BUTTON C")
+        this.KEYCODE_BUTTON_Z = new AndroidGameKey(KeyEvent.KEYCODE_BUTTON_Z, "BUTTON Z")
+    }
+
+}
+
+object AndroidAPI9KeyFactory {
+    private var instance : Object = NullUtil.getInstance().NULL_OBJECT
+
+    def getInstance() : AndroidAPI9KeyFactory = {
+        if (AndroidAPI9KeyFactory.instance eq NullUtil.getInstance().NULL_OBJECT) {
+            AndroidAPI9KeyFactory.instance = new AndroidAPI9KeyFactory()
+        }
+        return AndroidAPI9KeyFactory.instance.asInstanceOf[AndroidAPI9KeyFactory]
+    }
+
+}
+
+

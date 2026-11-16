@@ -1,0 +1,192 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.allbinary</groupId>
+  <artifactId>GameJ2MELibraryPOMScala</artifactId>
+  <packaging>pom</packaging>
+  <!-- AllBinary Platform Version Start -->
+  <version>1.0.0-SNAPSHOT</version>
+  <!-- AllBinary Platform Version End -->
+
+  <name>GameJ2MELibraryPOMScala</name>
+  <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+
+
+
+    <modules>
+
+        <!--
+        NoGyroSensorLibrary
+
+        -->
+        <module>../../android/AndroidUtilJavaLibraryScalaM</module>
+
+        <module>../../../allbinary_src/security/SimpleCryptLibraryScalaM</module>
+        <!--
+        <module>../../../../working_thirdpartyscala/security/BouncyCastleDESJavaLibraryScalaM</module>
+        <module>../../../../working_thirdpartyscala/communication/XmlRpc/XmlRpcJavaLibraryScalaM</module>
+        -->
+        <module>../../../allbinary_src/TokenizerJavaLibraryScalaM</module>
+        <module>../../../allbinary_src/security/BasicSecurityJavaLibraryScalaM</module>
+        <!--<module>../../../replace_these_stub_projects/security/YourCryptFileJavaLibraryScalaM</module>-->
+        <module>../../../replace_these_stub_projects/security/YourSecurityJavaLibraryScalaM</module>
+        <module>../../../replace_these_stub_projects/communication/YourXmlRpcJavaLibraryScalaM</module>
+        <module>../../../replace_these_stub_projects/allbinary_src/J2MEOnlyJavaLibraryScalaM</module>
+        <module>../../../replace_these_stub_projects/allbinary_src/J2MECompatibilityJavaLibraryScalaM</module>
+        <module>../../../replace_these_stub_projects/allbinary_src/J2MEJsInteropCompatibilityJavaLibraryScalaM</module>
+
+        <module>../../DebugJavaLibraryScalaM</module>             
+        <module>../../ResourceLibraryScalaM</module>
+        <module>../../ResourceJ2MEJavaLibraryScalaM</module>
+        <module>../../AndroidResourceLibraryScalaM</module>
+        <module>../../../allbinary_src/hardware/AndroidSystemJavaLibraryScalaM</module>
+
+        <module>../../../game/behavior/ArtificialIntelligenceLibraryScalaM</module>
+
+        <module>../../media/graphics/PlatformNullImageJavaLibraryScalaM</module>
+        <module>../../media/graphics/ImageCacheBaseJ2MEJavaLibraryScalaM</module>
+        <module>../../media/graphics/ImageCacheJ2MEJavaLibraryScalaM</module>
+        <module>../../../graphics/opengl/OpenGLJ2MENoneJavaLibraryScalaM</module>
+        <module>../../../graphics/opengl/OpenGLNoneJavaLibraryScalaM</module>
+        <module>../../../graphics/opengl/OpenGLNoneOtherJavaLibraryScalaM</module>
+        <module>../../../graphics/opengl/OpenGLNoneOther2JavaLibraryScalaM</module>
+        <module>../../../graphics/opengl/OpenGLESBaseJ2MEJavaLibraryScalaM</module>
+
+        <module>../../media/graphics/animation/AnimationLibraryScalaM</module>
+        <module>../../media/graphics/animation/RotationAnimationJavaLibraryScalaM</module>
+
+        <module>../../games/GameInputLibraryScalaM</module>
+
+        <module>../../games/GameScoresBaseJavaLibraryScalaM</module>
+        <module>../../games/GameScoresBaseJ2MELibraryScalaM</module>
+
+        <module>../../statistics/ApplicationStatisticsHTMLLibraryScalaM</module>
+        <!--
+        <module>../../games/GameConfigurationHTMLJavaLibraryScalaM</module>
+        -->
+        <module>../../games/GameConfigurationJ2MEJavaLibraryScalaM</module>   
+        <module>../../games/GameConfigurationJavaLibraryScalaM</module>
+
+        <module>../../games/GameIntermissionLibraryScalaM</module>
+
+        <module>../../GroupLibraryScalaM</module>
+
+        <module>../../input/NoSensorJavaLibraryScalaM</module>
+
+        <module>../../input/AllBinarySensorJavaLibraryScalaM</module>
+
+        <module>../../input/platform/me/GameInputMEJavaLibraryScalaM</module>
+        <module>../../input/platform/me/GameInputMEKeyOnlyJavaLibraryScalaM</module>
+        <module>../../input/platform/me/GameInputMEMotionJavaLibraryScalaM</module>
+        <module>../../input/platform/pc/GameInputPCBaseJavaLibraryScalaM</module>
+        <module>../../input/platform/pc/GameInputPCJavaLibraryScalaM</module>
+        <module>../../input/platform/pc/GameInputPCKeyOnlyJavaLibraryScalaM</module>
+        <module>../../input/platform/pc/GameInputPCMotionJavaLibraryScalaM</module>
+        <module>../../input/platform/pc/GameInputSwtJavaLibraryScalaM</module>
+
+        <module>../../input/AllBinaryGyroSensorJavaLibraryScalaM</module>
+        <module>../../input/MotionGestureJavaLibraryScalaM</module>
+        
+        <module>../../input/MotionGestureBaseJavaLibraryScalaM</module>
+
+        <module>../../games/GameInputPersistanceLibraryScalaM</module>
+        <module>../../games/GameInputNoPersistanceLibraryScalaM</module>
+        
+        <module>../../lib/VectorThreeDimensionalLibraryScalaM</module>
+        <module>../../input/AllBinaryAccelerometerSensorJavaLibraryScalaM</module>
+        <module>../../input/NoGyroSensorJavaLibraryScalaM</module>
+        <module>../../input/JSEGyroSensorJavaLibraryScalaM</module>
+        <!--
+        <module>../../input/android/</module>
+        <module>../../input/platform/android/GameInputAndroidBaseJavaLibraryScalaM</module>
+        -->
+
+        <module>../../media/sound/BasicPlayerJavaLibraryScalaM</module>
+        <module>../../media/sound/BasicPlayerMIDP2JavaLibraryScalaM</module>
+        <module>../../media/sound/NoPlayerJavaLibraryScalaM</module>
+        <module>../../media/sound/SoundJ2MELibraryScalaM</module>
+
+        <module>../../media/motion/AllBinaryVibrationJavaLibraryScalaM</module>
+        <module>../../media/motion/NoVibrateJavaLibraryScalaM</module>
+        <module>../../media/motion/VibrateAndroidJavaLibraryScalaM</module>
+
+        <module>../../media/graphics/NullCustomUIJavaLibraryScalaM</module>
+        <module>../../media/graphics/NullCustomUIBaseJavaLibraryScalaM</module>
+
+        <module>../../media/graphics/FormValidationJavaLibraryScalaM</module>
+        
+        <module>../../media/graphics/FormJavaLibraryScalaM</module>
+        <module>../../media/graphics/FormBaseJavaLibraryScalaM</module>
+        <!--
+        <module>../../media/graphics/FormJMEJavaLibraryScalaM</module>
+        -->
+        <module>../../../j2me/media/graphics/FormJMEJavaLibraryScalaM</module>
+
+        <module>../../media/graphics/animation/AnimationResourceJavaLibraryScalaM</module>
+        <module>../../media/graphics/animation/TransitionAnimationJavaLibraryScalaM</module>
+        <module>../../media/graphics/animation/NoTransitionAnimationJavaLibraryScalaM</module>
+        <!--
+        AndroidTransitionAnimationJavaLibraryM
+        -->
+        <module>../../media/graphics/animation/GameAnimationJavaLibraryScalaM</module>
+        <module>../../games/GameResourceJavaLibraryScalaM</module>
+        <module>../../games/GameSoundsJavaLibraryScalaM</module>
+
+        <module>../../input/TouchInputLibraryScalaP</module>
+
+        <module>../../media/MediaDataScalaM</module>
+        <module>../../media/sound/NotDeviceSpecificNoMediaMIDP1LibraryScalaM</module>
+
+        <module>../../../allbinary_src/content/ContentNoneJavaLibraryScalaM</module>
+        <module>../../../allbinary_src/content/ContentAndroidJavaLibraryScalaM</module>
+
+        <module>../../games/GameConfigurationFormJavaLibraryScalaM</module>
+
+        <module>../../FullScreenNoneJavaLibraryScalaM</module>
+        <!--
+        <module>../../FullScreenJavaLibraryScalaM</module>
+        -->
+
+        <module>../../../physics/VelocityLibraryScalaM</module>
+
+        <module>../../games/weapon/SoundsBasicWeaponsJavaLibraryScalaM</module>
+
+        <module>../../lib/TrigJ2MELibraryScalaM</module>
+
+        <module>../../media/graphics/geography/map/LayerPlacementLibraryScalaM</module>
+        <module>../../media/graphics/layer/AllBinaryLayerJavaLibraryScalaM</module>
+
+        <module>../../ScreenCaptureNoneJavaLibraryScalaM</module>
+        
+        <module>../licensing/GameLicensingNullJavaLibraryScalaM</module>
+        
+        <module>../../business/advertisement/AllBinaryAdvertisementClientJavaLibraryScalaM</module>
+        <module>../../business/advertisement/AdvertisementClientNoneJavaLibraryScalaM</module>
+
+        <module>../GameNotificationJavaLibraryScalaM</module>
+
+        <module>../../../graphics/opengl/NoSWTJavaLibraryScalaM</module>
+        <module>../../../graphics/opengl/SWTWithoutJOGLJavaLibraryScalaM</module>
+        <module>../SWTJavaLibraryScalaM</module>
+        <module>../GameJ2MELibraryScalaM</module>
+        
+        <!--
+        <module>../GameJ2MEOptionalLibraryPOScalaM</module>
+        -->
+    
+    </modules>
+
+</project>
+

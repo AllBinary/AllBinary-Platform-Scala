@@ -1,0 +1,32 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.game.displayable.canvas
+
+import _root_.org.allbinary.graphics.canvas.transition.progress.ProgressCanvas
+import _root_.org.allbinary.graphics.canvas.transition.progress.ProgressCanvasFactory
+import _root_.org.allbinary.graphics.paint.PaintableComposite
+import _root_.org.allbinary.graphics.paint.PaintableInterface
+
+class DemoCanvasProgressUtil {
+    import _root_.org.allbinary.game.displayable.canvas.DemoCanvasProgressUtil.{*}
+
+}
+
+object DemoCanvasProgressUtil {
+    def showProgress(demoCanvas : DemoCanvas) : Unit = {
+        DemoCanvasProgressUtil.showProgressOptionallyInTheBackground(demoCanvas, false)
+    }
+
+    def showProgressOptionallyInTheBackground(demoCanvas : DemoCanvas, background : Boolean) : Unit = {
+        val progressCanvas : ProgressCanvas = ProgressCanvasFactory.getInstance()
+        progressCanvas.startBackground(background)
+        var paintableArray : Array[PaintableInterface] = new Array[PaintableInterface](2)
+        paintableArray(0) = progressCanvas
+        paintableArray(1) = demoCanvas.getDefaultPaintableInterface()
+        demoCanvas.setDefaultPaintableInterface(new PaintableComposite(paintableArray))
+        demoCanvas.setPaintableInterface(demoCanvas.getDefaultPaintableInterface())
+    }
+
+}
+
+

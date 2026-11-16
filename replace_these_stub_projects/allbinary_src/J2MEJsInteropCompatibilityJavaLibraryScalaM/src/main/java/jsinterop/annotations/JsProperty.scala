@@ -1,0 +1,8 @@
+/* Generated Code Do Not Modify */
+package jsinterop.annotations
+
+
+//J2SE to J2ME compatibility
+class JsProperty() extends scala.annotation.StaticAnnotation
+
+

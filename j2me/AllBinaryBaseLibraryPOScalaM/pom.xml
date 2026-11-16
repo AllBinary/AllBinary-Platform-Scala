@@ -1,0 +1,88 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary</groupId>
+    <artifactId>AllBinaryBaseLibraryPOMScala</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>AllBinaryBaseLibraryPOMScala</name>
+    <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+    
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+        <module>../CommonJavaLibraryScalaM</module>
+        <module>../TempBaseJavaLibraryScalaM</module>
+        
+        <module>../../allbinary_src/LogScalaM</module>
+        <module>../../allbinary_src/allbinary_src_designpatterns_srcScalaM</module>
+        <module>../../allbinary_src/data/BaseDataJavaLibraryScalaM</module>
+        <module>../../allbinary_src/cache/BaseCacheJavaLibraryScalaM</module>
+        <module>../../allbinary_src/logic/BasePreloaderJavaLibraryScalaM</module>
+        <module>../../allbinary_src/logic/BasePreloaderJ2MEJavaLibraryScalaM</module>
+
+        <module>../ExceptionHTMLJavaLibraryScalaM</module>
+        <module>../J2MEExceptionLibraryScalaM</module>
+        <module>../../allbinary_src/J2SEExceptionLibraryScalaM</module>
+        <module>../J2MEUtilJavaLibraryScalaM</module>
+        <module>../J2MEColorJavaLibraryScalaM</module>
+        <module>../EventJ2MELibraryScalaM</module>
+
+        <module>../../allbinary_src/LogNoPlatformJavaLibraryScalaM</module>
+        <module>../../allbinary_src/LogJ2MEJavaLibraryScalaM</module>
+        <module>../../allbinary_src/LogJ2SEJavaLibraryScalaM</module>
+        <module>../../allbinary_src/LogAndroidJavaLibraryScalaM</module>
+        <module>../logging/LoggingNoneScalaM</module>
+        <module>../logging/LoggingJ2MEAllScalaM</module>
+        <module>../logging/LoggingJ2MEExceptionScalaM</module>
+        <module>../logging/LoggingAndroidAllScalaM</module>
+        <!--
+        //While it is a possible dependency option it really does not fit here
+        //as such it is actually build in the final POM builds instead
+        <module>../logging/LoggingRemoteExceptionScalaM</module>  
+        -->
+        
+        <module>../J2MEWindowingJavaLibraryScalaM</module>
+        
+        <module>../lib/BaseMathLibraryScalaM</module>
+        <module>../lib/BasicMathLibraryScalaM</module>
+        
+        <module>../../allbinary_src/ThreadLibraryScalaM</module>
+        <module>../../allbinary_src/ThreadHTMLLibraryScalaM</module>
+        <module>../../replace_these_stub_projects/allbinary_src/NoneOnlyJavaLibraryScalaM</module>
+        <module>../../allbinary_src/ThreadJ2MELibraryScalaM</module>
+        <module>../time/TimeJavaLibraryScalaM</module>
+
+        <module>../statistics/ApplicationStatisticsJ2SELibraryScalaM</module>
+        <module>../statistics/ApplicationStatisticsJ2MELibraryScalaM</module>
+        <module>../statistics/ApplicationStatisticsJavaLibraryScalaM</module>
+
+        <module>../../allbinary_src/logging/BasicLogConfigTypeJavaLibraryScalaM</module>
+        <module>../../allbinary_src/logging/LogConfigTypeGameClientJavaLibraryScalaM</module>
+
+        <module>../../allbinary_src/hardware/HardwareLibraryPOScalaM</module>
+
+        <module>../lib/TrigBaseLibraryScalaM</module>
+
+    </modules>
+
+</project>
+

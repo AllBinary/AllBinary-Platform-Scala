@@ -1,0 +1,19 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.graphics.form.item.validation
+
+import _root_.org.allbinary.graphics.form.item.ABTextFieldItem
+
+class PasswordValidator(param_textFieldItem : ABTextFieldItem, param_min : Int, param_max : Int, param_allowOnEmpty : Boolean) extends TextFieldItemValidator(param_textFieldItem, param_min, param_max, param_allowOnEmpty) {
+
+    //Constructor
+    {
+        val textFieldItem : ABTextFieldItem = param_textFieldItem
+        val min : Int = param_min
+        val max : Int = param_max
+        val allowOnEmpty : Boolean = param_allowOnEmpty
+    }
+
+}
+
+

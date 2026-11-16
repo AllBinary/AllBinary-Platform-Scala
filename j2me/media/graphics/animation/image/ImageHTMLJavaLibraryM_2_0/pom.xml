@@ -1,0 +1,272 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary.media.image</groupId>
+    <artifactId>ImageHTMLJavaLibraryScala</artifactId>
+    <packaging>jar</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>2.0</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>ImageHTMLJavaLibraryScala</name>
+    <url>http://www.allbinary.com/</url>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+
+
+
+    <properties>
+        <!-- Scala install with maven2 for the Scala 3 compiler and library. Written by ScalaPomUpdater. -->
+        <scala.home>C:/scala</scala.home>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LoggingJ2MEAllScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>LogJ2MEJavaLibraryScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>J2MEOnlyJavaLibraryScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>ImageCacheJ2MEJavaLibraryScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-playn</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>2.0</version>
+            <!-- AllBinary Platform Version End -->
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.allbinary</groupId>
+            <artifactId>OpenGLNoneOtherJavaLibraryScala</artifactId>
+            <!-- AllBinary Platform Version Start -->
+            <version>1.0.0-SNAPSHOT</version>
+            <!-- AllBinary Platform Version End -->
+
+            <optional>true</optional>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-playn</artifactId>
+            <version>2.0</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>J2MEColorJavaLibraryScala</artifactId>
+                    <groupId>org.allbinary</groupId>
+                </exclusion>
+            </exclusions>
+            <optional>true</optional>
+        </dependency>
+<!--    
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-midp</artifactId>
+            <version>2.0.4</version>
+            <optional>true</optional>
+        </dependency>
+        -->
+        <!--
+        Public microemu
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-midp</artifactId>
+            <version>2.0.4</version>
+            <optional>true</optional>
+        </dependency>
+        Custom microemu
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-midp</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-135</artifactId>
+            <version>2.0.4</version>
+            <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <artifactId>microemu-javase-swingScala</artifactId>
+                    <groupId>org.microemu</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--
+        Public microemu
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-135</artifactId>
+            <version>2.0.4</version>
+            <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <artifactId>microemu-javase-swingScala</artifactId>
+                    <groupId>org.microemu</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        Custom microemu
+        <dependency>
+            <groupId>org.microemu</groupId>
+            <artifactId>microemu-jsr-135</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <artifactId>microemu-javase-swingScala</artifactId>
+                    <groupId>org.microemu</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        -->
+
+        <dependency>
+            <groupId>io.playn</groupId>
+            <artifactId>playn-scene</artifactId>
+            <version>2.0.3</version>
+<!--
+            <version>2.0</version>
+            <version>2.0.1</version>
+            <version>2.0.2</version>
+            <version>2.0.3</version>
+-->
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>io.playn</groupId>
+            <artifactId>playn-html</artifactId>
+            <version>2.0.3</version>
+<!--
+            <version>2.0</version>
+            <version>2.0.1</version>
+            <version>2.0.2</version>
+            <version>2.0.3</version>
+-->
+            <optional>true</optional>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>compile-scala-sources</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target xmlns:if="ant:if">
+                                <fileset id="scala.sources" dir="${project.basedir}/src/main/java" includes="**/*.scala" erroronmissingdir="false"/>
+                                <!-- A project without .scala files such as a resource jar has nothing to compile -->
+                                <condition property="scala.sources.available">
+                                    <resourcecount when="greater" count="0" refid="scala.sources"/>
+                                </condition>
+                                <mkdir dir="${project.build.outputDirectory}"/>
+                                <pathconvert property="scala.source.files" refid="scala.sources" pathsep="${line.separator}"/>
+                                <echo file="${project.build.directory}/scala-sources.txt" message="${scala.source.files}"/>
+                                <path id="scala.library.path">
+                                    <fileset dir="${scala.home}/maven2" includes="org/scala-lang/scala-library/**/*.jar,org/scala-lang/scala3-library_3/**/*.jar"/>
+                                </path>
+                                <path id="scala.compiler.path">
+                                    <fileset dir="${scala.home}/maven2" includes="org/scala-lang/scala3-compiler_3/**/*.jar,org/scala-lang/scala3-interfaces/**/*.jar,org/scala-lang/tasty-core_3/**/*.jar,org/scala-lang/scala-library/**/*.jar,org/scala-lang/scala3-library_3/**/*.jar,org/scala-sbt/**/*.jar,org/ow2/asm/**/*.jar"/>
+                                </path>
+                                <pathconvert property="scala.classpath">
+                                    <path refid="maven.compile.classpath"/>
+                                    <path refid="scala.library.path"/>
+                                </pathconvert>
+                                <java if:set="scala.sources.available" classname="dotty.tools.dotc.Main" classpathref="scala.compiler.path" fork="true" failonerror="true">
+                                    <jvmarg value="-Xss16m"/>
+                                    <arg value="-nowarn"/>
+                                    <arg value="-color:never"/>
+                                    <arg value="-encoding"/>
+                                    <arg value="UTF-8"/>
+                                    <arg value="-d"/>
+                                    <arg value="${project.build.outputDirectory}"/>
+                                    <arg value="-classpath"/>
+                                    <arg value="${scala.classpath}"/>
+                                    <arg value="@${project.build.directory}/scala-sources.txt"/>
+                                </java>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+        
+    </build>
+
+</project>
+

@@ -1,0 +1,142 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.allbinary</groupId>
+  <artifactId>CombatGameJavaLibraryPOMScala</artifactId>
+  <packaging>pom</packaging>
+  <!-- AllBinary Platform Version Start -->
+  <version>1.0.0-SNAPSHOT</version>
+  <!-- AllBinary Platform Version End -->
+
+  <name>CombatGameJavaLibraryPOMScala</name>
+  <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+
+        <!--
+
+        -->
+
+        <module>../../games/TickableJavaLibraryScalaM</module>
+
+        <module>../../games/CommonHeadsUpDisplayLibraryScalaM</module>
+
+        <module>../../../physics/MovementJavaLibraryScalaM</module>
+        <!--        -->
+        <module>../../games/PartsJavaLibraryScalaM</module>
+        <module>../../games/PickupGameJavaLibraryScalaM</module>
+
+        <module>../../../allbinary_src/licensing/HardCodedLicenseInitInfoJavaLibraryScalaM</module>
+        <module>../../../allbinary_src/licensing/FileLicenseInitInfoJavaLibraryScalaM</module>
+        <module>../../../allbinary_src/licensing/ClientInfoLicensingJavaLibraryScalaM</module>
+
+        <module>../../games/licensing/PartnerJ2MEJavaLibraryScalaM</module>
+        <module>../../games/licensing/PartnerHTMLJavaLibraryScalaM</module>
+        <module>../../games/licensing/PartnerAndroidJavaLibraryScalaM</module>
+        <module>../../games/licensing/NoGameLicensingJavaLibraryScalaM</module>
+        <module>../../games/licensing/GameLicensingOnlyDemoJavaLibraryScalaM</module>
+        <module>../../games/licensing/GameLicensingOnlyNormalJavaLibraryScalaM</module>
+        <module>../../games/licensing/GameLicensingBaseJavaLibraryScalaM</module>
+
+        <!--
+        <module>../../games/GameScoresBaseLibraryScalaM</module>
+        <module>../../games/GameScoresBaseHTMLLibraryScalaM</module>
+        <module>../../games/GameScoresBaseJ2MELibraryScalaM</module>
+        -->
+        <module>../../games/GameScoresLocalJavaLibraryScalaM</module>
+        <module>../../games/GameScoresRemoteAndLocalJavaLibraryScalaM</module>
+
+        <module>../../../store/ThirdPartyStoreJavaLibraryScalaM</module>
+        <module>../../../store/NoThirdPartyStoreJavaLibraryScalaM</module>
+
+        <module>../../media/graphics/layer/CollisionLayerJavaLibraryScalaM</module>
+        <module>../../games/CollisionLibraryScalaM</module>
+
+        <module>../../games/multiplayer/AllBinaryGameClientBaseNullJavaLibraryScalaM</module>
+
+        <module>../../games/PickupLayerJavaLibraryScalaM</module>
+
+        <module>../../games/DamageGameJavaLibraryScalaM</module>
+        <module>../../games/DropJavaLibraryScalaM</module>
+        <module>../../games/WeaponLayerJavaLibraryScalaM</module>
+
+        <module>../../games/CombatGameJavaLibraryScalaM</module>
+        <module>../../games/LifeJavaLibraryScalaM</module>
+
+        <module>../../games/CommonHeadsUpDisplayCombatGameLibraryScalaM</module>
+        <module>../../games/LifeOrDeathDataJavaLibraryScalaM</module>
+
+        <module>../../games/BasicWeaponPartsJavaLibraryScalaM</module>
+        <module>../../games/weapon/WeaponPropertiesJavaLibraryScalaM</module>
+
+        <module>../../games/weapon/WeaponMineJavaLibraryScalaM</module>
+
+        <!--
+        <module>../../media/graphics/effects/fireworks/FireworksJavaLibraryScalaM</module>
+        -->
+
+        <module>../../media/graphics/geography/map/TerrainEventJavaLibraryScalaM</module>
+
+<!--
+        <module>../../media/graphics/geography/map/BasicPlatformGeographicMapJavaLibraryScalaM</module>
+        -->
+
+        <!--
+        <module>../../media/graphics/geography/map/RaceTrackScalaP</module>
+        -->
+
+        <!--
+        XmlRpcJavaLibrary
+        RemoteXmlRpcJavaLibrary
+
+        Since POMs are built before the other libs is it best to handle this differently
+        ../../
+        <module>../../../../workscala/j2me/games/strategy/rts/RTSGameJavaLibraryScalaP</module>
+        -->
+
+        <module>../../media/graphics/OtherGraphicsMediaLibraryScalaP</module>
+
+        <module>../../input/NoTouchButtonResourceAnimationJavaLibraryScalaM</module>
+        <module>../../input/TouchButtonResourceAnimationJavaLibraryScalaM</module>
+        <module>../../input/TouchButtonResourceOpenGLESAnimationJavaLibraryScalaM</module>
+
+        <module>../../input/TrackingEventJavaLibraryScalaM</module>
+        <module>../../../game/behavior/BehaviorLibraryScalaP</module>
+
+        <module>../../media/sound/OtherSoundMediaLibraryScalaP</module>
+
+        <module>../../../allbinary_src/licensing/ApplicationConfigurationJavaLibraryScalaM</module>
+        <module>../../../allbinary_src/licensing/ApplicationConfigurationNoFSJavaLibraryScalaM</module>
+        <module>../../input/AllBinaryMagneticFieldSensorJavaLibraryScalaM</module>
+        <module>../../android/VirtualKeyboardJavaLibraryScalaM</module>
+
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
+

@@ -1,0 +1,90 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.business.context.modules.storefront
+
+
+class StoreFrontData {
+    import _root_.org.allbinary.business.context.modules.storefront.StoreFrontData.{*}
+
+    //StoreFront Commands
+    val CANCEL : String = "Cancel Store Front"
+
+    val SELECT : String = "Select Store Front"
+
+    val INSTALL : String = "Install Store Front"
+
+    val INSTALL_COMPLETE : String = "Install Store Front Complete"
+
+    //public final String USERNAME = "USERNAME";
+    val NAME : String = "STOREFRONT_NAME"
+
+    val CURRENTHOSTNAME : String = "STOREFRONT_CURRENTHOSTNAME"
+
+    val CURRENTHOSTNAMEPATH : String = "STOREFRONT_CURRENTHOSTNAMEPATH"
+
+    val CURRENTHOMEHOSTNAME : String = "STOREFRONT_CURRENTHOMEHOSTNAME"
+
+    val CURRENTHOMEHOSTNAMEPATH : String = "STOREFRONT_CURRENTHOMEHOSTNAMEPATH"
+
+    val HOMEHOSTNAME : String = "STOREFRONT_HOMEHOSTNAME"
+
+    val HOMEHOSTNAMEPATH : String = "STOREFRONT_HOMEHOSTNAMEPATH"
+
+    val HOSTNAME : String = "STOREFRONT_HOSTNAME"
+
+    val HOSTNAMEPATH : String = "STOREFRONT_HOSTNAMEPATH"
+
+    val TESTHOMEHOSTNAME : String = "STOREFRONT_TESTHOMEHOSTNAME"
+
+    val TESTHOMEHOSTNAMEPATH : String = "STOREFRONT_TESTHOMEHOSTNAMEPATH"
+
+    val TESTHOSTNAME : String = "STOREFRONT_TESTHOSTNAME"
+
+    val TESTHOSTNAMEPATH : String = "STOREFRONT_TESTHOSTNAMEPATH"
+
+    val IMAGEPATH : String = "STOREFRONT_IMAGEPATH"
+
+    val STATICPATH : String = "STOREFRONT_STATICPATH"
+
+    val CATEGORYPATH : String = "STOREFRONT_CATEGORYPATH"
+
+    val INVENTORYCONTROL : String = "STOREFRONT_INVENTORYCONTROL"
+
+    val CONFIGURATION : String = "STOREFRONT_CONFIGURATION"
+
+    val SUBSTORES : String = "STOREFRONT_SUBSTORES"
+
+    val TAGLOCATION : String = "STOREFRONT_TAGLOCATION"
+
+    val PACKAGELOCATION : String = "STOREFRONT_PACKAGELOCATION"
+
+    val FTP : String = "STOREFRONT_FTP"
+
+    val FTPPATH : String = "STOREFRONT_FTPPATH"
+
+    val FTPUSERNAME : String = "STOREFRONT_FTPUSERNAME"
+
+    val FTPPASSWORD : String = "STOREFRONT_FTPPASSWORD"
+
+    val TESTFTP : String = "STOREFRONT_TESTFTP"
+
+    val TESTFTPPATH : String = "STOREFRONT_TESTFTPPATH"
+
+    val TESTFTPUSERNAME : String = "STOREFRONT_TESTFTPUSERNAME"
+
+    val TESTFTPPASSWORD : String = "STOREFRONT_TESTFTPPASSWORD"
+
+    val SELECTSTORENAME : String = "STOREFRONT_SELECTSTORENAME"
+
+}
+
+object StoreFrontData {
+    private val instance : StoreFrontData = new StoreFrontData()
+
+    def getInstance() : StoreFrontData = {
+        return StoreFrontData.instance
+    }
+
+}
+
+

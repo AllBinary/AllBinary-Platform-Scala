@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy, see www.w3.org">
+  <title></title>
+</head>
+<body>
+<table style="font-family: Verdana;" align="center" width="600">
+  <tbody>
+    <tr>
+      <td>
+      <h2>Windows Input Injectors Help</h2>
+      <h3>Introduction</h3>
+Windows Input Injectors
+are required to automate applications that use DirectX and/or
+LowLevelInput on Windows. <br>
+      <h3>Automated DLL Installation</h3>
+The Automated DLL
+Installation interface starts automatically if the DLLs are not
+installed or manually installed.
+The Results field must
+display INSTALLED before the dependent modules will run.&nbsp; <br>
+      <br>
+      <span style="font-weight: bold;">What do I do if it causes an
+application to work incorrectly?</span><br>
+      <br>
+Uninstall if an application does not work when INSTALLED.&nbsp; Not
+uninstalling will disable the modules depending on these input
+injectors, but
+will allow incompatible applications to function.<br>
+      <br>
+      <span style="font-weight: bold;">What should I do if installation
+fails?</span><br>
+      <br>
+      <span style="font-weight: bold;">Important:&nbsp;</span>Set the
+dinput.dll and dinput8.dll to have write permissions.&nbsp; This
+usually causes installation failure on Vista only.&nbsp; Some help on
+this is provided below.<br>
+      <br>
+If you are sure that the permissions are set correctly and you
+restarted that InputAutomationToo and tried the installation again and
+it still failed then you will need manually install the DLLs.<br>
+      <h3 style="font-weight: bold;"><small>Checking
+File Permissions</small></h3>
+Right clicking on a file or
+directory and selecting properties should display its
+permissions.&nbsp; The example below shows the properties before they
+are changed on Vista for the user running the Automated DLL
+Installer.&nbsp; <br>
+      <br>
+      <img style="width: 369px; height: 501px;" alt="Properties Before"
+ src="images/properties_before.png"><br>
+      <br>
+Click on edit to change the file permissions.&nbsp; Note that you must
+also
+be the owner to change the permissions.&nbsp; You can set yourself as
+the
+owner using the advanced button displayed above. <br>
+      <h3><small>Setting File Permissions</small></h3>
+Dinput.dll, Dinput8.dll, and the System32 directory must have write
+access for the user running the automated installer as shown below:<br>
+      <br>
+      <img style="width: 368px; height: 446px;" alt="Properties After"
+ src="images/properties_after.png"><br>
+      <span style="font-weight: bold;"><br>
+      </span>Please see your
+Operating System help for specifics on changing permissions.
+      <h3>Manual DLL Installation (Only
+use if Automated DLL Installation Fails)</h3>
+      <p>You must have write privilages
+to the system32 directory (Permission changes only needed for Vista). <br>
+      </p>
+      <p>1. Unload any programs that use
+DirectX. <br>
+2. Rename the original dinput.dll and dinput8.dll to dinput.dll.bak and
+dinput8.dll.bak. <br>
+3. Make sure that the files are not copied back in. If that does occur
+do the following: <br>
+&nbsp;&nbsp; a. Remove/Disable any Windows Installation CDs <br>
+&nbsp;&nbsp; b. Rename the two files in any active Windows Installation
+archive like: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C:\[Windows
+Path]\ServicePackFiles\i386.. <br>
+&nbsp;&nbsp; c. Remove the dinput.dll and dinput8.dll from: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; C:\[Windows Path]\System32\ and
+c:\[Windows Path]\System32\dllcache <br>
+4. Create the directory: c:\real_directx_dlls <br>
+5. Copy the renamed files from step 2 into your c:\[Windows
+Path]\System32\ into c:\original_files<br>
+6. Copy the injector files in:<br>
+      </p>
+      <p>&lt;INSTALL
+DIRECTORY&gt;\InputAutomation\Windows\&lt;Operating System&gt; <br>
+      </p>
+      <p>into c:\[Windows Path]\System32\<br>
+      </p>
+      <p>Example: For XP the dlls would
+be in:<br>
+      </p>
+      <p>&lt;INSTALL
+DIRECTORY&gt;\InputAutomation\Windows\XP</p>
+      <p>7. Renamed the newly copied
+dinput files by removing the .ia extension.<br>
+      </p>
+      <h3>System Injector Installation
+(Vista Only)<br>
+      </h3>
+      <h4>Manual Mouse Driver
+Installation (Requires an extra PS/2
+Mouse)</h4>
+      <p>1. Select Start Menu <br>
+2. Select Control Panel <br>
+3. Select System <br>
+4. Select Hardware Tab <br>
+5. Select Device Manager <br>
+6. Select Mouse and other
+pointing devices <br>
+7. Select the PS/2 device and
+right click <br>
+8. Select Properties <br>
+9. Select Driver Tab <br>
+10. Select Update Driver <br>
+11. Select Next <br>
+12. Select Display a list of
+known drivers <br>
+13. Select Have Disk and
+browse for the sysmouse.inf in the driver
+directory <br>
+14. Finish the driver
+installation<br>
+      </p>
+      <h3>Testing New Applications <br>
+      </h3>
+Note: Only required for the
+Generic Module on unverified applications.<br>
+      <br>
+1. Install the custom dlls
+using the Installation Tool<br>
+2. (Vista Only) Install the
+custom mouse driver manually. Instructions
+described below.<br>
+3. Run the application(s) you
+wish to use the&nbsp; on<br>
+4. Try playing the game(s)
+without running the Input Automation GUI. <br>
+      <h3>Special Keyboard Controls</h3>
+      <h4>DirectInput Injector:</h4>
+Press Ctrl + F5 to toggle
+Keyboard<br>
+      <h4>LowLevelInput Injector:</h4>
+Press Ctrl + F6 to toggle
+Mouse<br>
+      <br>
+Pressing Button 3 on the
+mouse will also toggle the Mouse.<br>
+      <br>
+Note: If an application
+crashes or disallows normal actions then that
+application will need to use the c:\real_directx_dlls.&nbsp; Updates to
+the software may be available for that game.&nbsp; Please report any
+errors.<br>
+      <br>
+5. If the game(s) ran as
+normal then run the Input Automation GUI.<br>
+      <big><span style="font-weight: bold;"><br>
+      </span></big><big><span style="font-weight: bold;">License</span></big><br>
+      <br>
+      <span style="font-weight: bold;">Extends</span><br>
+      <br>
+This module extends the AllBinaryInputAutomationTool license along with
+the following.<br>
+      <br>
+      <span style="font-weight: bold;">Disclaimer</span><br>
+      <br>
+The owner of this injector module is not responisble for account loss,
+system, or other damages resulting from its use.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

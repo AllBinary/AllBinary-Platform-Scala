@@ -1,0 +1,24 @@
+/* * AllBinary Open License Version 1 * Copyright (c) 2011 AllBinary *  * By agreeing to this license you and any business entity you represent are * legally bound to the AllBinary Open License Version 1 legal agreement. *  * You may obtain the AllBinary Open License Version 1 legal agreement from * AllBinary or the root directory of AllBinary's AllBinary Platform repository. *  * Created By: Travis Berthelot *  */
+/* Generated Code Do Not Modify */
+package org.allbinary.business.user.modules.configuration
+
+import _root_.org.allbinary.logic.io.file.CommonDataFileStrings
+
+class UserConfigurationData private() {
+    import _root_.org.allbinary.business.user.modules.configuration.UserConfigurationData.{NAME as _, UNCRYPTED_EXTENSION as _, ENCRYPTED_EXTENSION as _, *}
+    def NAME : String = _root_.org.allbinary.business.user.modules.configuration.UserConfigurationData.NAME
+    def UNCRYPTED_EXTENSION : String = _root_.org.allbinary.business.user.modules.configuration.UserConfigurationData.UNCRYPTED_EXTENSION
+    def ENCRYPTED_EXTENSION : String = _root_.org.allbinary.business.user.modules.configuration.UserConfigurationData.ENCRYPTED_EXTENSION
+
+}
+
+object UserConfigurationData {
+    val NAME : String = "USER_CONFIGURATION_NAME"
+
+    val UNCRYPTED_EXTENSION : String = CommonDataFileStrings.getInstance().UNCRYPTED_EXTENSION
+
+    val ENCRYPTED_EXTENSION : String = CommonDataFileStrings.getInstance().ENCRYPTED_EXTENSION
+
+}
+
+
