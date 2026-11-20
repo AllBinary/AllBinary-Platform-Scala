@@ -21,4 +21,12 @@
             <outputFileNameMapping></outputFileNameMapping>
         </dependencySet>
     </dependencySets>
+
+    <fileSets>
+        <fileSet>
+            <includes>
+                <include>*.scala</include>
+            </includes>
+        </fileSet>
+    </fileSets>
 </assembly>
